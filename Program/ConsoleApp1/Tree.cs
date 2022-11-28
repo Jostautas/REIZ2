@@ -14,6 +14,11 @@ public class Tree
 
     public void AddNewNode(int addTo)
     {
+        if(addTo > Total)
+        {
+            Console.WriteLine("ERROR: wrong input, such parrent node does not exist");
+            return;
+        }
         Nodes.Add(new Node(Total, addTo));
         ++Total;
     }
