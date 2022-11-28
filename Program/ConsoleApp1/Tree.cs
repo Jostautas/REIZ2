@@ -10,7 +10,6 @@ public class Tree
         Nodes = new List<Node>();
         Nodes.Add(new Node(0, 0));
         Total = 1;
-        Depth = 1;
     }
 
     public void AddNewNode(int addTo)
@@ -52,8 +51,8 @@ public class Tree
 
         for (int i = 0; i < Nodes.Count; i++)
         {
-            if ( (Nodes[startAt].Id == Nodes[i].Previous)
-                && (startAt != i) )
+            if ( Nodes[startAt].Id == Nodes[i].Previous
+                && startAt != i) 
             {
                 int tempDepth = GetDepth(i, depth+1);
 
